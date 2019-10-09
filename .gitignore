@@ -12,6 +12,9 @@ application/logs/*
 !application/logs/.htaccess
 /vendor/
 
+/sessions/*
+!/sessions/index.html
+!/sessions/.htaccess
 
 # IDE Files
 #-------------------------
