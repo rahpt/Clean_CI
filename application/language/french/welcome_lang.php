@@ -1,3 +1,5 @@
 <?php
 $lang['header_welcome']='Bonjour! CodeIgniter!';
-$lang['cal_december'] = 'Dezembro';
+// login
+$lang['login_header'] = 'Login to Your Account';
+$lang['login_registration'] = 'Create a New Account';
