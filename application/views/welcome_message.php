@@ -12,9 +12,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
     <div id="container">
-        <h1>Welcome to CodeIgniter!</h1>
+        <h1><?= $this->lang->line('header_welcome') ?></h1>
 
         <div id="body">
+            <select onchange="javascript:window.location.href = '<?php echo base_url(); ?>LanguageSwitcher/switchLang/' + this.value;">
+                <option value="english" <?= ($this->session->userdata('site_lang') == 'english') ? 'selected="selected"' : ''; ?>>English</option>
+                <option value="french" <?= ($this->session->userdata('site_lang') == 'french') ? 'selected="selected"' : ''; ?>>French</option>
+                <option value="german" <?= ($this->session->userdata('site_lang') == 'german') ? 'selected="selected"' : ''; ?>>German</option>   
+            </select>
             <p>The page you are looking at is being generated dynamically by CodeIgniter.</p>
 
             <p>If you would like to edit this page you'll find it located at:</p>
