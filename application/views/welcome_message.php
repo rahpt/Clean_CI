@@ -8,7 +8,8 @@
             <option value="german" <?= ($this->session->userdata('site_lang') == 'german') ? 'selected="selected"' : ''; ?>>German</option>   
         </select>
         <?php if ($is_logged_in) { ?>
-            <a href="<?php echo base_url('users/logout'); ?>" class="logout">Logout</a>
+            <a href="<?php echo base_url('users/logout'); ?>" class="logout">Logout</a><br>
+            <a href="<?php echo base_url('users/account'); ?>" class="logout">Profile</a>
         <?php } else { ?>
             <a href="<?php echo base_url('users/login'); ?>" class="logout">Login</a>
         <?php } ?>

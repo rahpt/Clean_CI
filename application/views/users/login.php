@@ -25,6 +25,7 @@
                     <input type="submit" name="loginSubmit" value="LOGIN">
                 </div>
             </form>
+	    	<a href="<?php echo $loginURL; ?>"><img src="<?php echo base_url('assets/images/google-sign-in-btn.png'); ?>" /></a>
             <p>Don't have an account? <a href="<?php echo base_url('users/registration'); ?>">Register</a></p>
         </div>
     </div>
