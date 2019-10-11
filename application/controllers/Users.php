@@ -83,7 +83,7 @@ class Users extends CI_Controller
                 $data['error_msg'] = 'Please fill all the mandatory fields.';
             }
         }
-
+        
         // Load view 
         $this->load->view('elements/header', $data);
         $this->load->view('users/login', $data);
@@ -137,7 +137,11 @@ class Users extends CI_Controller
     {
         $this->session->unset_userdata('isUserLoggedIn');
         $this->session->unset_userdata('userId');
+
+        // Destroy entire session data
         $this->session->sess_destroy();
+
+        // Redirect to login page
         redirect('welcome');
     }
 
@@ -147,8 +151,9 @@ class Users extends CI_Controller
             return true;
         } else {
             return false;
-        }   
+        }
     }
+
     // Existing email check during validation 
     public function email_check($str)
     {
